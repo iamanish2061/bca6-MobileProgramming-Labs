@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lab2Constraint">
+
+    <TextView
+        android:id="@+id/signupTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Signup"
+        android:textStyle="bold"
+        android:textSize="32sp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/usernameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Username:"
+        android:textSize="20sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/signupTv"
+        android:layout_marginTop="40dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <EditText
+        android:id="@+id/usernameEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:inputType="text"
+        android:textSize="18sp"
+
+        app:layout_constraintBaseline_toBaselineOf="@id/usernameTv"
+
+        app:layout_constraintStart_toEndOf="@id/usernameTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp" />
+
+    <TextView
+        android:id="@+id/passwordTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Password:"
+        android:textSize="20sp"
+
+        app:layout_constraintTop_toBottomOf="@id/usernameTv"
+        android:layout_marginTop="25dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <EditText
+        android:id="@+id/passwordEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:inputType="textPassword"
+        android:textSize="18sp"
+
+        app:layout_constraintBaseline_toBaselineOf="@id/passwordTv"
+
+        app:layout_constraintStart_toEndOf="@id/usernameTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp" />
+
+    <TextView
+        android:id="@+id/phoneTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Phone:"
+        android:textSize="20sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/passwordTv"
+        android:layout_marginTop="25dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <EditText
+        android:id="@+id/phoneEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:inputType="phone"
+        android:textSize="18sp"
+
+        app:layout_constraintBaseline_toBaselineOf="@id/phoneTv"
+
+        app:layout_constraintStart_toEndOf="@id/usernameTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp" />
+
+    <TextView
+        android:id="@+id/fullnameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Full Name:"
+        android:textSize="20sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/phoneTv"
+        android:layout_marginTop="25dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <EditText
+        android:id="@+id/fullnameEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:inputType="text"
+        android:textSize="18sp"
+
+        app:layout_constraintBaseline_toBaselineOf="@id/fullnameTv"
+
+        app:layout_constraintStart_toEndOf="@id/usernameTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp" />
+
+    <TextView
+        android:id="@+id/genderTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Gender:"
+        android:textSize="20sp"
+
+        app:layout_constraintTop_toBottomOf="@id/fullnameTv"
+        android:layout_marginTop="25dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/genderGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+
+        app:layout_constraintTop_toTopOf="@+id/genderTv"
+        app:layout_constraintBottom_toBottomOf="@+id/genderTv"
+
+        app:layout_constraintStart_toEndOf="@id/usernameTv"
+        android:layout_marginHorizontal="20dp">
+
+        <RadioButton
+            android:id="@+id/maleRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/femaleRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/otherRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/signupBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Signup"
+        android:textSize="20sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/genderTv"
+        android:layout_marginTop="40dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
