@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    >
+
+    <TextView
+        android:id="@+id/topicTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Place an Order"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_margin="40dp"
+    />
+
+    <TextView
+        android:id="@+id/foodTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select food item:"
+        android:layout_below="@id/topicTV"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <Spinner
+        android:id="@+id/foodNameSpn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/food"
+        android:scrollbarSize="20dp"
+        android:layout_alignBaseline="@id/foodTv"
+        android:layout_toEndOf="@id/foodTv"
+        />
+
+    <TextView
+        android:id="@+id/quantityTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the quantity:"
+        android:layout_below="@id/foodTv"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        />
+
+    <EditText
+        android:id="@+id/quantityEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="1"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@id/quantityTv"
+        android:layout_toEndOf="@id/quantityTv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"
+        />
+
+    <Button
+        android:id="@+id/orderBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order"
+        android:textSize="30sp"
+        android:layout_below="@id/quantityTv"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/statusTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/orderBtn"
+        android:layout_margin="40dp"
+        android:text="Status: ---"
+        />
+    <TextView
+        android:id="@+id/totalTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/statusTv"
+        android:layout_margin="40dp"
+        android:text="Total: ---"
+        />
+
+
+</RelativeLayout>
