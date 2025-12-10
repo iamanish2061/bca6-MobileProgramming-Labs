@@ -29,6 +29,7 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     }
 
 
+// number of sections
     @Override
     public int getItemCount() {
         return 3;
